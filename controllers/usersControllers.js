@@ -1,7 +1,7 @@
 import User from '../models/userModel.js';
 import { errorHandler } from '../utils/error.js';
 
-export const getUser = async (req, res) => {
+export const getUser = async (req, res,next) => {
     try {
         let user = await User.findById(req.params.id);
         res.status(200).json({ success: true, user });
@@ -11,7 +11,7 @@ export const getUser = async (req, res) => {
     }
 }
 
-export const getAllUsers = async (req, res) => {
+export const getAllUsers = async (req, res,next) => {
     try {
         let user = await User.find();
         res.status(200).json({ success: true, user });
@@ -31,7 +31,7 @@ export const updateUser = async (req, res, next) => {
     }
 }
 
-export const deleteUser = async (req, res) => {
+export const deleteUser = async (req, res,next) => {
     try {
         await User.findByIdAndDelete(req.params.id);
         res.status(200).json({ success: true, message: "Hotel Deleted Successfully" });
