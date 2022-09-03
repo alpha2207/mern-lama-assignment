@@ -8,12 +8,6 @@ router.post('/register', register);
 
 // Login a user
 router.get('/login', login)
-// // Create a Hotel
-// router.post('/',createHotel)
-// // UPDATE A HOTEL
-// router.put('/:id', updateHotel)
-// // DELETE A HOTEL
-// router.delete('/:id',deleteHotel)
 
 
 
