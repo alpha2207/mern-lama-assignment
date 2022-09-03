@@ -1,13 +1,13 @@
 import express from "express";
-import { register } from "../controllers/authControllers.js";
+import { login, register } from "../controllers/authControllers.js";
 const router = express.Router();
 
 
 // Register a user
 router.post('/register', register);
 
-// // GET ALL HOTELS
-// router.get('/', getAllHotels)
+// Login a user
+router.get('/login', login)
 // // Create a Hotel
 // router.post('/',createHotel)
 // // UPDATE A HOTEL
